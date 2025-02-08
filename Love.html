@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- // Handle "No" button movement
+    const noButton = document.getElementById("no");
+    noButton.addEventListener("mouseenter", changePosition);
+    linear-gradient(135deg, #ff9a9e, #fad0c4);-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For: Lyn Lee</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);;
+    }
+    #container {
+      text-align: center;
+    }
+    h1 {
+      color: #ff3366;
+      font-size: 2.5rem;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #fff;
+      background-color: #ff3366;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    button:hover {
+      background-color: #d92e5e;
+      transform: scale(1.1);
+    }
+    #no {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>💖Will You Be My Girlfriend? 💖</h1>
+     <div>
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3lqNHJjNXIybXhpYW04NWI3eXZjaDh0Yzkxa3oxZ3YzeGJ1ZGFpayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/92YG8KKSjYhMc/giphy.gif" height="200" width="200">
+     </div>
+    <button id="yesButton">Yes</button>
+    <button id="no">No</button>
+  </div>
+
+
+  <script>
+    // Handle "Yes" button click
+    document.getElementById("yesButton").addEventListener("click", function () {
+      alert("HIP HIP HOORAY I LOVE YOU <3");
+    });
+
+    // Handle "No" button movement
+    document.getElementById("no").addEventListener("click", function () {
+      alert("try again ☹");
+    });
+
+    function changePosition() {
+      // Generate random positions within the viewport
+      const x = Math.floor(Math.random() * (window.innerWidth - 100));
+      const y = Math.floor(Math.random() * (window.innerHeight - 50));
+      noButton.style.left = x + "px";
+      noButton.style.top = y + "px";
+    }
+  </script>
+</body>
+</html>
